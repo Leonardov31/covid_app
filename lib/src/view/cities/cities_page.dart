@@ -1,11 +1,12 @@
-import 'package:covid_app/src/utils/loading_states.dart';
-import 'package:covid_app/src/viewmodels/covid_city_list_view_model.dart';
-import 'package:flutter/material.dart';
+import '../../utils/loading_states.dart';
+import '../../viewmodels/covid_city_list_view_model.dart';
+import '../../widget/signout_icon_button.dart.dart';
 
+import 'package:flutter/material.dart';
 import 'widgets/covid_cities_info_card.dart';
 
-class CitysPage extends StatelessWidget {
-  const CitysPage({Key? key, required this.state}) : super(key: key);
+class CitiesPage extends StatelessWidget {
+  const CitiesPage({Key? key, required this.state}) : super(key: key);
 
   final String state;
 
@@ -18,12 +19,7 @@ class CitysPage extends StatelessWidget {
         backgroundColor: Colors.blue[900],
         elevation: 0,
         title: Text("Estado: $state"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.logout),
-          ),
-        ],
+        actions: const [SignoutIconButton()],
       ),
       body: AnimatedBuilder(
         animation: _viewModel,

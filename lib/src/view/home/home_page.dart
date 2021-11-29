@@ -1,3 +1,4 @@
+import 'package:covid_app/src/widget/signout_icon_button.dart.dart';
 import 'package:flutter/material.dart';
 
 import '../../viewmodels/covid_state_list_view_model.dart';
@@ -16,12 +17,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.blue[900],
         elevation: 0,
         title: const Text("Dados por estado"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.logout),
-          ),
-        ],
+        actions: const [SignoutIconButton()],
       ),
       body: AnimatedBuilder(
         animation: _viewModel,
