@@ -1,4 +1,4 @@
-import 'package:covid_app/src/view/citys/citys.dart';
+import 'package:covid_app/src/view/cities/cities_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../app/app_text_style.dart';
@@ -63,7 +63,7 @@ class CovidStateInfoCard extends StatelessWidget {
   void nextPage(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Citys(state: data.state)),
+      MaterialPageRoute(builder: (context) => CitiesPage(state: data.state)),
     );
   }
 }
